@@ -117,12 +117,60 @@ export default {};
     </div>
 
     <!-- Parte inferiore Footer -->
-    <div class="footer-bottom"></div>
+    <div class="footer-bottom">
+      <div class="container">
+        <button type="button" class="outlined-btn">SIGN-UP NOW!</button>
+
+        <ul>
+          <li>
+            <span>FOLLOW US</span>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../assets/img/footer-facebook.png"
+                alt="Facebook icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/img/footer-twitter.png" alt="Twitter icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/img/footer-youtube.png" alt="YouTube icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../assets/img/footer-pinterest.png"
+                alt="Pinterest icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../assets/img/footer-periscope.png"
+                alt="Periscope icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </footer>
 </template>
 
 <style lang="scss" scoped>
-// Parte centrale footer
+@use "../assets/scss/mixin.scss" as *;
+
+/**************
+PARTE CENTRALE
+**************/
 .footer-main {
   background-image: url("../assets/img/footer-bg.jpg");
   background-position: center;
@@ -171,12 +219,53 @@ export default {};
   }
 }
 
-// Parte inferiore Footer
+/***************
+PARTE INFERIORE
+***************/
 .footer-bottom {
   height: 100px;
-  background-color: #444;
+  background-color: #333;
 
   position: relative;
   z-index: 1;
+
+  .container {
+    @include flex-center();
+    height: 100%;
+
+    .outlined-btn {
+      border: 2px solid #0160ba;
+      background-color: #333;
+      padding: 0.5rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0160ba;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-grow: 1;
+      margin-right: 0;
+
+      li {
+        margin: 0 0.5rem;
+
+        span {
+          color: #0282f9;
+          font-weight: bold;
+        }
+
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
 }
 </style>
