@@ -17,7 +17,7 @@ export default {};
 
 section {
   @include flex-center("vertical");
-  min-height: 150px;
+  min-height: 100px;
   background-color: #222;
 
   .content {
