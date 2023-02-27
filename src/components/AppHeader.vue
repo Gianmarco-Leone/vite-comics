@@ -72,7 +72,9 @@ export default {
 <template>
   <header>
     <div class="container">
-      <img src="../assets/img/dc-logo.png" alt="Logo" />
+      <a href="#">
+        <img src="../assets/img/dc-logo.png" alt="Logo" />
+      </a>
       <ul>
         <li v-for="(link, index) in links">
           <a
@@ -120,6 +122,7 @@ header {
           display: inline-block;
           height: 100px;
           line-height: 100px;
+          color: #444;
         }
 
         .active {
