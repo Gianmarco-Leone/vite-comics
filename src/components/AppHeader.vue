@@ -57,6 +57,15 @@ export default {
       ],
     };
   },
+  methods: {
+    changeActive(i) {
+      if (this.links[i].active == false) {
+        this.links[i].active = true;
+      } else {
+        this.links[i].active = false;
+      }
+    },
+  },
 };
 </script>
 
@@ -65,8 +74,12 @@ export default {
     <div class="container">
       <img src="../assets/img/dc-logo.png" alt="Logo" />
       <ul>
-        <li v-for="link in links">
-          <a :href="link.url">
+        <li v-for="(link, index) in links">
+          <a
+            :href="link.url"
+            :class="link.active ? 'active' : ''"
+            @click="changeActive(index)"
+          >
             {{ link.text }}
           </a>
         </li>
@@ -91,6 +104,7 @@ header {
     }
 
     ul {
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -101,6 +115,17 @@ header {
         margin: 0 0.5rem;
         font-weight: 600;
         font-size: 0.8rem;
+
+        a {
+          display: inline-block;
+          height: 100px;
+          line-height: 100px;
+        }
+
+        .active {
+          color: #0282f9;
+          border-bottom: 5px solid #0282f9;
+        }
       }
     }
   }
