@@ -20,4 +20,6 @@ export default {
   <AppFooter />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use "./assets/scss/general.scss";
+</style>
