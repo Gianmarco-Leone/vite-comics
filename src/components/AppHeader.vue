@@ -66,7 +66,9 @@ export default {
       <img src="../assets/img/dc-logo.png" alt="Logo" />
       <ul>
         <li v-for="link in links">
-          {{ link.text }}
+          <a :href="link.url">
+            {{ link.text }}
+          </a>
         </li>
       </ul>
     </div>
