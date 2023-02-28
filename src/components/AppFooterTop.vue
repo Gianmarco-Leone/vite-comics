@@ -60,9 +60,6 @@ export default {};
 <style lang="scss" scoped>
 @use "../assets/scss/mixin.scss" as *;
 
-/**************
-PARTE SUPERIOE
-**************/
 .footer-top {
   height: 100px;
   background-color: #0282f9;

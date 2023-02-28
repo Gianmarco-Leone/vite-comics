@@ -1,9 +1,11 @@
 <script>
 export default {
+  // Recupero la lista dei link dell'header
   props: {
     listLinks: Array,
   },
 
+  // Funzione per cambiare colore ai link dell'header al click
   // methods: {
   //   changeActive(i) {
   //     if (this.links[i].active == false) {

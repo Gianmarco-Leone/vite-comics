@@ -1,10 +1,14 @@
 <script>
+// Importo il componente della singola card
 import AppCard from "./AppCard.vue";
 
 export default {
+  // Recupero lista dati comics
   props: {
     cardList: Array,
   },
+
+  // Richiamo componente singola card
   components: {
     AppCard,
   },
@@ -18,8 +22,11 @@ export default {
       <span class="jumbotron-label">CURRENT SERIES</span>
       <div class="content">
         <div class="card-container">
+          <!-- Componente Card -->
           <AppCard v-for="card in cardList" :cardItem="card" />
         </div>
+
+        <!-- Bottone LOAD MORE -->
         <div class="text-center">
           <button type="button" class="primary-btn">LOAD MORE</button>
         </div>
@@ -35,6 +42,7 @@ export default {
 section {
   background-color: #222;
 
+  // Sfondo Jumbotron
   .jumbotron {
     height: 40vh;
     background-image: url("../assets/img/jumbotron.jpg");
@@ -46,6 +54,7 @@ section {
   .container {
     position: relative;
 
+    // Etichetta blu tra jumbotron e sezione cards
     .jumbotron-label {
       background-color: #0282f9;
       padding: 0.5rem 1rem;
@@ -58,6 +67,9 @@ section {
     }
   }
 
+  /************  
+  SEZIONE CARDS
+  *************/
   .content {
     padding: 3rem 0;
 

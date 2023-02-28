@@ -1,7 +1,9 @@
 <script>
+// Importo componente fascia azzurra
 import AppFooterTop from "./AppFooterTop.vue";
 
 export default {
+  // Richiamo componente fascia azzurra
   components: {
     AppFooterTop,
   },
@@ -10,9 +12,10 @@ export default {
 
 <template>
   <footer>
+    <!-- Componente fascia azzurra -->
     <AppFooterTop />
 
-    <!-- Parte centrale Footer -->
+    <!-- PARTE CENTRALE -->
     <div class="footer-main">
       <div class="container">
         <!-- Prima colonna -->
@@ -124,7 +127,7 @@ export default {
       </div>
     </div>
 
-    <!-- Parte inferiore Footer -->
+    <!-- PARTE INFERIORE -->
     <div class="footer-bottom">
       <div class="container">
         <button type="button" class="outlined-btn">SIGN-UP NOW!</button>
@@ -221,6 +224,7 @@ PARTE CENTRALE
       }
     }
 
+    // Logo di sfondo
     img {
       width: 45%;
 
