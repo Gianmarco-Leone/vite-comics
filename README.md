@@ -16,6 +16,14 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 Stile customizzato con `SASS`.
 
+## MAIN:
+
+![Screenshot](./src/assets/Screenshot_main.png)
+
+### SEZIONE CENTRALE:
+
+Aggiunta di un ulteriore componente per la creazione della singola card. Recupero immagini e testo da una struttura dati tramite props.
+
 ## Bonus:
 
 Creazione componente aggiuntivo per gestire la fascia azzurra con le icone.
