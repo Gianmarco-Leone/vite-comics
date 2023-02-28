@@ -12,7 +12,7 @@ export default {
         {
           text: "COMICS",
           url: "#",
-          active: false,
+          active: true,
         },
         {
           text: "MOVIES",
@@ -57,15 +57,15 @@ export default {
       ],
     };
   },
-  methods: {
-    changeActive(i) {
-      if (this.links[i].active == false) {
-        this.links[i].active = true;
-      } else {
-        this.links[i].active = false;
-      }
-    },
-  },
+  // methods: {
+  //   changeActive(i) {
+  //     if (this.links[i].active == false) {
+  //       this.links[i].active = true;
+  //     } else {
+  //       this.links[i].active = false;
+  //     }
+  //   },
+  // },
 };
 </script>
 
@@ -76,12 +76,8 @@ export default {
         <img src="../assets/img/dc-logo.png" alt="Logo" />
       </a>
       <ul>
-        <li v-for="(link, index) in links">
-          <a
-            :href="link.url"
-            :class="link.active ? 'active' : ''"
-            @click="changeActive(index)"
-          >
+        <li v-for="(link, index) in links" :key="link.text">
+          <a :href="link.url" :class="link.active ? 'active' : ''">
             {{ link.text }}
           </a>
         </li>
