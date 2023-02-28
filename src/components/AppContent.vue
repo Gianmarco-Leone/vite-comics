@@ -38,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/scss/general.scss" as *;
 @use "../assets/scss/mixin.scss" as *;
+@use "../assets/scss/variables.scss" as *;
 
 section {
   background-color: #222;
@@ -56,7 +57,7 @@ section {
 
     // Etichetta blu tra jumbotron e sezione cards
     .jumbotron-label {
-      background-color: #0282f9;
+      background-color: $primary-color;
       padding: 0.5rem 1rem;
       font-size: 1.2rem;
       font-weight: bold;
@@ -79,7 +80,7 @@ section {
     }
 
     .primary-btn {
-      background-color: #0282f9;
+      background-color: $primary-color;
       padding: 0.5rem;
       font-weight: bold;
       color: #fff;

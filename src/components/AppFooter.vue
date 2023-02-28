@@ -178,6 +178,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/scss/mixin.scss" as *;
+@use "../assets/scss/variables.scss" as *;
 
 /**************
 PARTE CENTRALE
@@ -273,7 +274,7 @@ PARTE INFERIORE
         margin: 0 0.5rem;
 
         span {
-          color: #0282f9;
+          color: $primary-color;
           font-weight: bold;
         }
 

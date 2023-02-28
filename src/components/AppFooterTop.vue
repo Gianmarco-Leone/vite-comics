@@ -59,10 +59,11 @@ export default {};
 
 <style lang="scss" scoped>
 @use "../assets/scss/mixin.scss" as *;
+@use "../assets/scss/variables.scss" as *;
 
 .footer-top {
   height: 100px;
-  background-color: #0282f9;
+  background-color: $primary-color;
   position: relative;
   z-index: 1;
 

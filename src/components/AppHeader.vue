@@ -37,6 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/scss/mixin.scss" as *;
+@use "../assets/scss/variables.scss" as *;
 
 header {
   background-color: #fefefe;
@@ -71,8 +72,8 @@ header {
         }
 
         .active {
-          color: #0282f9;
-          border-bottom: 5px solid #0282f9;
+          color: $primary-color;
+          border-bottom: 5px solid $primary-color;
         }
       }
     }
