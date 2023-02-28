@@ -20,12 +20,16 @@ export default {
         <div class="card-container">
           <AppCard v-for="card in cardList" :cardItem="card" />
         </div>
+        <div class="text-center">
+          <button type="button" class="primary-btn">LOAD MORE</button>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/scss/general.scss" as *;
 @use "../assets/scss/mixin.scss" as *;
 
 section {
@@ -60,6 +64,14 @@ section {
     .card-container {
       @include flex-center();
       flex-wrap: wrap;
+    }
+
+    .primary-btn {
+      background-color: #0282f9;
+      padding: 0.5rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
     }
   }
 }

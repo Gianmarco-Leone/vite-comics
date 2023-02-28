@@ -8,7 +8,7 @@ export default {
 
 <template>
   <div class="card">
-    <img src="../assets/img/buy-comics-digital-comics.png" alt="" />
+    <img :src="cardItem.thumb" />
     <div class="card-text">
       <span> {{ cardItem.series }} </span>
     </div>
@@ -17,13 +17,19 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  //  debug
   padding: 1rem;
   width: calc(100% / 6);
 
+  img {
+    width: 162px;
+    height: 162px;
+    object-position: top;
+    cursor: pointer;
+  }
+
   .card-text {
     margin-top: 1rem;
-    min-height: 2rem;
+    min-height: 2.5rem;
 
     span {
       color: #fff;
