@@ -1,62 +1,9 @@
 <script>
 export default {
-  data() {
-    return {
-      //   logo: "../assets/img/dc-logo.png",
-      links: [
-        {
-          text: "CHARACTERS",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "COMICS",
-          url: "#",
-          active: true,
-        },
-        {
-          text: "MOVIES",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "TV",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "GAMES",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "COLLECTIBLES",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "VIDEOS",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "FANS",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "NEWS",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "SHOP",
-          url: "#",
-          active: false,
-        },
-      ],
-    };
+  props: {
+    listLinks: Array,
   },
+
   // methods: {
   //   changeActive(i) {
   //     if (this.links[i].active == false) {
@@ -76,7 +23,7 @@ export default {
         <img src="../assets/img/dc-logo.png" alt="Logo" />
       </a>
       <ul>
-        <li v-for="(link, index) in links" :key="link.text">
+        <li v-for="(link, index) in listLinks" :key="link.text">
           <a :href="link.url" :class="link.active ? 'active' : ''">
             {{ link.text }}
           </a>
