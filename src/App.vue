@@ -7,7 +7,7 @@ import AppFooter from "./components/AppFooter.vue";
 // Importo il file index che raccoglie tutti i miei file data,
 // alla fine del percorso potrei anche omettere /index.js
 // perchè i file index sono i primi che vengono letti
-import { headerLinks, comics } from "./data/index.js";
+import { headerLinks, comics, footerMenus } from "./data/index.js";
 
 export default {
   data() {
@@ -16,6 +16,8 @@ export default {
       headerLinks,
       // comics: comics, => che è uguale a scrivere
       comics,
+      // footerMenus: footerMenus, => che è uguale a scrivere
+      footerMenus,
     };
   },
 
@@ -33,7 +35,7 @@ export default {
   <main>
     <AppContent :cardList="comics" />
   </main>
-  <AppFooter />
+  <AppFooter :menus="footerMenus" />
 </template>
 
 <style lang="scss">

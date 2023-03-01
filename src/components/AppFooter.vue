@@ -3,6 +3,10 @@
 import AppFooterTop from "./AppFooterTop.vue";
 
 export default {
+  // Recupero la lista dei menu del footer
+  props: {
+    menus: Array,
+  },
   // Richiamo componente fascia azzurra
   components: {
     AppFooterTop,
@@ -18,106 +22,16 @@ export default {
     <!-- PARTE CENTRALE -->
     <div class="footer-main">
       <div class="container">
-        <!-- Prima colonna -->
-        <div class="my-footer-col">
-          <span class="footer-list-title"> DC COMICS </span>
-
+        <!-- Singola colonna -->
+        <div v-for="menu in menus" class="my-footer-col">
+          <span class="footer-list-title">
+            {{ menu.title }}
+          </span>
           <ul>
-            <li>
-              <a href="#">Characters</a>
-            </li>
-            <li>
-              <a href="#">Commics</a>
-            </li>
-            <li>
-              <a href="#">Movies</a>
-            </li>
-            <li>
-              <a href="#">TV</a>
-            </li>
-            <li>
-              <a href="#">Games</a>
-            </li>
-            <li>
-              <a href="#">Videos</a>
-            </li>
-            <li>
-              <a href="#">News</a>
-            </li>
-          </ul>
-
-          <span class="footer-list-title"> SHOP </span>
-
-          <ul>
-            <li>
-              <a href="#">Shop DC</a>
-            </li>
-            <li>
-              <a href="#">Shop DC Collectibles</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Seconda colonna -->
-        <div class="my-footer-col">
-          <span class="footer-list-title"> DC </span>
-
-          <ul>
-            <li>
-              <a href="#">Terms Of Use</a>
-            </li>
-            <li>
-              <a href="#">Privacy policy (New)</a>
-            </li>
-            <li>
-              <a href="#">Ad Choices</a>
-            </li>
-            <li>
-              <a href="#">Advertising</a>
-            </li>
-            <li>
-              <a href="#">Jobs</a>
-            </li>
-            <li>
-              <a href="#">Subscriptions</a>
-            </li>
-            <li>
-              <a href="#">Talent Workshops</a>
-            </li>
-            <li>
-              <a href="#">CPSC Cerificates</a>
-            </li>
-            <li>
-              <a href="#">Ratings</a>
-            </li>
-            <li>
-              <a href="#">Shop Help</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Terza colonna -->
-        <div class="my-footer-col">
-          <span class="footer-list-title"> SITES </span>
-
-          <ul>
-            <li>
-              <a href="#">DC</a>
-            </li>
-            <li>
-              <a href="#">MAD Magazine</a>
-            </li>
-            <li>
-              <a href="#">DC Kids</a>
-            </li>
-            <li>
-              <a href="#">DC Universe</a>
-            </li>
-            <li>
-              <a href="#">DC Power Visa</a>
+            <li v-for="link in menu.links">
+              <a href="link.url">
+                {{ link.text }}
+              </a>
             </li>
           </ul>
         </div>
@@ -192,15 +106,17 @@ PARTE CENTRALE
   height: 400px;
 
   .container {
+    height: 100%;
     position: relative;
 
     display: flex;
-    column-gap: 1rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
     padding: 1rem 0;
 
     .my-footer-col {
       width: 10%;
-      height: calc(400px - 2rem);
       display: flex;
       flex-direction: column;
 
