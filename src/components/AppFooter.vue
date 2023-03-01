@@ -29,7 +29,7 @@ export default {
           </span>
           <ul>
             <li v-for="link in menu.links">
-              <a href="link.url">
+              <a :href="link.url">
                 {{ link.text }}
               </a>
             </li>
@@ -50,6 +50,7 @@ export default {
           <li>
             <span>FOLLOW US</span>
           </li>
+
           <li>
             <a href="#">
               <img
@@ -58,16 +59,19 @@ export default {
               />
             </a>
           </li>
+
           <li>
             <a href="#">
               <img src="../assets/img/footer-twitter.png" alt="Twitter icon" />
             </a>
           </li>
+
           <li>
             <a href="#">
               <img src="../assets/img/footer-youtube.png" alt="YouTube icon" />
             </a>
           </li>
+
           <li>
             <a href="#">
               <img
@@ -76,6 +80,7 @@ export default {
               />
             </a>
           </li>
+
           <li>
             <a href="#">
               <img
@@ -112,7 +117,8 @@ PARTE CENTRALE
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-content: flex-start;
+    column-gap: 1rem;
     padding: 1rem 0;
 
     .my-footer-col {
